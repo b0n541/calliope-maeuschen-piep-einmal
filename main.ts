@@ -5,6 +5,7 @@ enum RadioMessage {
 let rolle = 0
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     rolle = 1
+    basic.showString("K")
 })
 input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
     if (rolle == 1) {
@@ -13,6 +14,7 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     rolle = 2
+    basic.showString("M")
 })
 radio.onReceivedString(function (receivedString) {
     if (rolle == 2 && receivedString == "piep einmal") {
